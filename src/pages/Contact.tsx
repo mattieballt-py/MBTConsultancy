@@ -10,11 +10,8 @@ import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
+    name: "",
     email: "",
-    company: "",
-    project: "",
     message: ""
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -37,9 +34,9 @@ const Contact = () => {
         .from('ContactMessages')
         .insert([
           {
-            name: `${formData.firstName} ${formData.lastName}`.trim(),
+            name: formData.name,
             email: formData.email,
-            message: `Company: ${formData.company}\nProject Type: ${formData.project}\n\nMessage:\n${formData.message}`
+            message: formData.message
           }
         ]);
 
@@ -52,11 +49,8 @@ const Contact = () => {
 
       // Reset form
       setFormData({
-        firstName: "",
-        lastName: "",
+        name: "",
         email: "",
-        company: "",
-        project: "",
         message: ""
       });
     } catch (error) {
@@ -168,62 +162,32 @@ const Contact = () => {
               </CardHeader>
               <CardContent className="space-y-6">
                 <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div>
-                      <label htmlFor="firstName" className="text-sm font-medium">First Name *</label>
-                      <Input 
-                        id="firstName" 
-                        placeholder="John" 
-                        value={formData.firstName}
-                        onChange={handleInputChange}
-                        required
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="lastName" className="text-sm font-medium">Last Name *</label>
-                      <Input 
-                        id="lastName" 
-                        placeholder="Doe" 
-                        value={formData.lastName}
-                        onChange={handleInputChange}
-                        required
-                      />
-                    </div>
+                  <div>
+                    <label htmlFor="name" className="text-sm font-medium">Name *</label>
+                    <Input 
+                      id="name" 
+                      placeholder="Jane Doe" 
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      required
+                    />
                   </div>
                   <div>
                     <label htmlFor="email" className="text-sm font-medium">Email *</label>
                     <Input 
                       id="email" 
                       type="email" 
-                      placeholder="john@example.com" 
+                      placeholder="mariecurie@example.com" 
                       value={formData.email}
                       onChange={handleInputChange}
                       required
                     />
                   </div>
                   <div>
-                    <label htmlFor="company" className="text-sm font-medium">Company</label>
-                    <Input 
-                      id="company" 
-                      placeholder="Your Company" 
-                      value={formData.company}
-                      onChange={handleInputChange}
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="project" className="text-sm font-medium">Project Type</label>
-                    <Input 
-                      id="project" 
-                      placeholder="e.g., Robotics, Mechatronics, Automation" 
-                      value={formData.project}
-                      onChange={handleInputChange}
-                    />
-                  </div>
-                  <div>
                     <label htmlFor="message" className="text-sm font-medium">Message *</label>
                     <Textarea 
                       id="message" 
-                      placeholder="Tell us about your project requirements..."
+                      placeholder="Excited to hear from you..."
                       rows={4}
                       value={formData.message}
                       onChange={handleInputChange}
