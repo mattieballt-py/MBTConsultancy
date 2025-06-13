@@ -4,6 +4,11 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
+  base: '/MBTConsultancy.com.c/',
+  build: {
+    outDir: 'docs',
+    emptyOutDir: true,
+  },
   server: {
     host: "::",
     port: 8080,
@@ -16,5 +21,4 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: '/MBTConsultancy.com.c/',
 }));

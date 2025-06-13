@@ -1,4 +1,6 @@
-const Footer = () => {
+import React from 'react';
+
+const Footer: React.FC = () => {
   return (
     <footer className="bg-card border-t border-border py-8 font-techy">
       <div className="container mx-auto px-4">
@@ -53,5 +55,5 @@ const Footer = () => {
   );
 };
 
-export const Footer = () => { ... };
+export default Footer;
 
