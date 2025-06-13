@@ -7,44 +7,50 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: 45 20% 92%; /* Beige background */
     --foreground: 222.2 84% 4.9%;
 
-    --card: 0 0% 100%;
+    --card: 45 20% 95%; /* Slightly lighter beige for cards */
     --card-foreground: 222.2 84% 4.9%;
 
-    --popover: 0 0% 100%;
+    --popover: 45 20% 95%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 217 91% 60%;
+    --primary: 158 64% 52%; /* Forest green */
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 210 40% 96.1%;
+    --secondary: 45 15% 85%; /* Muted beige */
     --secondary-foreground: 222.2 47.4% 11.2%;
 
-    --muted: 210 40% 96.1%;
+    --muted: 45 15% 85%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 217 91% 60%;
+    --accent: 196 75% 67%; /* Light blue */
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 217 91% 60%;
+    --border: 45 15% 80%; /* Beige border */
+    --input: 45 15% 80%;
+    --ring: 158 64% 52%; /* Forest green ring */
 
     --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
+    --sidebar-background: 45 20% 90%;
     --sidebar-foreground: 240 5.3% 26.1%;
     --sidebar-primary: 240 5.9% 10%;
     --sidebar-primary-foreground: 0 0% 98%;
     --sidebar-accent: 240 4.8% 95.9%;
     --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-border: 45 15% 80%;
+    --sidebar-ring: 158 64% 52%;
+
+    /* Custom colors for the new palette */
+    --sunset-orange: 25 95% 65%; /* Sunset orange */
+    --light-blue: 196 75% 67%;
+    --forest-green: 158 64% 52%;
+    --beige: 45 20% 92%;
   }
 
   .dark {
@@ -54,19 +60,19 @@
     --card-foreground: 210 40% 98%;
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
-    --primary: 217 91% 60%;
+    --primary: 158 64% 52%;
     --primary-foreground: 222.2 47.4% 11.2%;
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
-    --accent: 217.2 32.6% 17.5%;
+    --accent: 196 75% 67%;
     --accent-foreground: 210 40% 98%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 217 91% 60%;
+    --ring: 158 64% 52%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -74,7 +80,7 @@
     --sidebar-accent: 240 3.7% 15.9%;
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-ring: 158 64% 52%;
   }
 }
 
@@ -94,13 +100,37 @@
 
 @layer utilities {
   .gradient-bg {
-    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(270 50% 40%) 100%);
+    background: linear-gradient(135deg, hsl(var(--forest-green)) 0%, hsl(var(--sunset-orange)) 100%);
   }
   
   .gradient-text {
-    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(270 50% 40%) 100%);
+    background: linear-gradient(135deg, hsl(var(--forest-green)) 0%, hsl(var(--sunset-orange)) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+  }
+
+  .sunset-orange {
+    color: hsl(var(--sunset-orange));
+  }
+
+  .bg-sunset-orange {
+    background-color: hsl(var(--sunset-orange));
+  }
+
+  .text-light-blue {
+    color: hsl(var(--light-blue));
+  }
+
+  .bg-light-blue {
+    background-color: hsl(var(--light-blue));
+  }
+
+  .text-forest-green {
+    color: hsl(var(--forest-green));
+  }
+
+  .bg-forest-green {
+    background-color: hsl(var(--forest-green));
   }
 }

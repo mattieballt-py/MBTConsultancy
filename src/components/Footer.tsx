@@ -1,72 +1,57 @@
 
-import { Link } from "react-router-dom";
-import { Linkedin, Twitter, Instagram, Facebook, Youtube } from "lucide-react";
-
-export const Footer = () => {
-  const socialLinks = [
-    { name: "LinkedIn", icon: Linkedin, href: "https://linkedin.com" },
-    { name: "Twitter", icon: Twitter, href: "https://twitter.com" },
-    { name: "Instagram", icon: Instagram, href: "https://instagram.com" },
-    { name: "Facebook", icon: Facebook, href: "https://facebook.com" },
-    { name: "YouTube", icon: Youtube, href: "https://youtube.com" },
-  ];
-
+const Footer = () => {
   return (
-    <footer className="bg-muted/30 border-t">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <footer className="bg-card border-t border-border py-8 font-techy">
+      <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="col-span-1 md:col-span-2">
-            <Link to="/" className="flex items-center space-x-2 mb-4">
-              <div className="h-8 w-8 rounded-lg bg-gradient-to-r from-primary to-purple-600 flex items-center justify-center">
-                <span className="text-white font-bold text-sm">MB</span>
-              </div>
-              <span className="text-xl font-bold gradient-text">MBT Consultancy</span>
-            </Link>
-            <p className="text-muted-foreground mb-4 max-w-md">
-              Solving interesting engineering problems through innovative robotics and mechatronics solutions. 
-              Led by Mattie Ball, bringing cutting-edge technology to complex challenges.
+          <div className="md:col-span-2">
+            <h3 className="text-lg font-bold text-forest-green mb-4">MBT Consultancy</h3>
+            <p className="text-muted-foreground mb-4">
+              Leading robotics and mechatronics engineering solutions. 
+              Transforming complex challenges into innovative automation systems.
             </p>
             <div className="flex space-x-4">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  <social.icon className="h-5 w-5" />
-                  <span className="sr-only">{social.name}</span>
-                </a>
-              ))}
+              <a href="#" className="text-light-blue hover:text-sunset-orange transition-colors">
+                LinkedIn
+              </a>
+              <a href="#" className="text-light-blue hover:text-sunset-orange transition-colors">
+                Twitter
+              </a>
+              <a href="#" className="text-light-blue hover:text-sunset-orange transition-colors">
+                GitHub
+              </a>
             </div>
           </div>
-
+          
           <div>
-            <h3 className="font-semibold mb-4">Navigation</h3>
-            <ul className="space-y-2">
-              <li><Link to="/" className="text-muted-foreground hover:text-primary transition-colors">Home</Link></li>
-              <li><Link to="/projects" className="text-muted-foreground hover:text-primary transition-colors">Projects</Link></li>
-              <li><Link to="/blog" className="text-muted-foreground hover:text-primary transition-colors">Blog</Link></li>
-              <li><Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">Contact</Link></li>
+            <h4 className="text-forest-green font-semibold mb-4">Services</h4>
+            <ul className="space-y-2 text-sm">
+              <li><a href="#" className="text-muted-foreground hover:text-sunset-orange transition-colors">Robotics Engineering</a></li>
+              <li><a href="#" className="text-muted-foreground hover:text-sunset-orange transition-colors">Mechatronics Design</a></li>
+              <li><a href="#" className="text-muted-foreground hover:text-sunset-orange transition-colors">Automation Solutions</a></li>
+              <li><a href="#" className="text-muted-foreground hover:text-sunset-orange transition-colors">AI Integration</a></li>
             </ul>
           </div>
-
+          
           <div>
-            <h3 className="font-semibold mb-4">Services</h3>
-            <ul className="space-y-2">
-              <li className="text-muted-foreground">Robotics Engineering</li>
-              <li className="text-muted-foreground">Mechatronics Design</li>
-              <li className="text-muted-foreground">Automation Solutions</li>
-              <li className="text-muted-foreground">Technical Consulting</li>
+            <h4 className="text-forest-green font-semibold mb-4">Company</h4>
+            <ul className="space-y-2 text-sm">
+              <li><a href="/" className="text-muted-foreground hover:text-sunset-orange transition-colors">Home</a></li>
+              <li><a href="/projects" className="text-muted-foreground hover:text-sunset-orange transition-colors">Projects</a></li>
+              <li><a href="/blog" className="text-muted-foreground hover:text-sunset-orange transition-colors">Blog</a></li>
+              <li><a href="/contact" className="text-muted-foreground hover:text-sunset-orange transition-colors">Contact</a></li>
             </ul>
           </div>
         </div>
-
-        <div className="border-t mt-8 pt-8 text-center text-muted-foreground">
-          <p>&copy; 2024 MBT Consultancy. All rights reserved. | Designed by Mattie Ball</p>
+        
+        <div className="border-t border-border mt-8 pt-8 text-center">
+          <p className="text-muted-foreground text-sm">
+            © 2024 MBT Consultancy. All rights reserved. | Engineered by Mattie Ball
+          </p>
         </div>
       </div>
     </footer>
   );
 };
+
+export default Footer;
