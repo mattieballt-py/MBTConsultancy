@@ -1,4 +1,3 @@
-
 const Footer = () => {
   return (
     <footer className="bg-card border-t border-border py-8 font-techy">
@@ -36,10 +35,10 @@ const Footer = () => {
           <div>
             <h4 className="text-forest-green font-semibold mb-4">Company</h4>
             <ul className="space-y-2 text-sm">
-              <li><a href="/" className="text-muted-foreground hover:text-sunset-orange transition-colors">Home</a></li>
-              <li><a href="/projects" className="text-muted-foreground hover:text-sunset-orange transition-colors">Projects</a></li>
-              <li><a href="/blog" className="text-muted-foreground hover:text-sunset-orange transition-colors">Blog</a></li>
-              <li><a href="/contact" className="text-muted-foreground hover:text-sunset-orange transition-colors">Contact</a></li>
+              <li><a href="./" className="text-muted-foreground hover:text-sunset-orange transition-colors">Home</a></li>
+              <li><a href="./projects" className="text-muted-foreground hover:text-sunset-orange transition-colors">Projects</a></li>
+              <li><a href="./blog" className="text-muted-foreground hover:text-sunset-orange transition-colors">Blog</a></li>
+              <li><a href="./contact" className="text-muted-foreground hover:text-sunset-orange transition-colors">Contact</a></li>
             </ul>
           </div>
         </div>
