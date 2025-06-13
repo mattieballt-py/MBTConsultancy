@@ -8,6 +8,12 @@ export default defineConfig(({ mode }) => ({
   build: {
     outDir: 'docs',
     emptyOutDir: true,
+    sourcemap: true,
+    rollupOptions: {
+      output: {
+        manualChunks: undefined
+      }
+    }
   },
   server: {
     host: "::",
