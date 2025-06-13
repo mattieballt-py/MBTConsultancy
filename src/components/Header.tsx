@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -9,10 +8,10 @@ export const Header = () => {
   const location = useLocation();
 
   const navigation = [
-    { name: "Home", href: "/" },
-    { name: "Projects", href: "/projects" },
-    { name: "Blog", href: "/blog" },
-    { name: "Contact", href: "/contact" },
+    { name: "Home", href: "./" },
+    { name: "Projects", href: "./projects" },
+    { name: "Blog", href: "./blog" },
+    { name: "Contact", href: "./contact" },
   ];
 
   const isActive = (href: string) => location.pathname === href;
@@ -21,7 +20,7 @@ export const Header = () => {
     <header className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-sm">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
-          <Link to="/" className="flex items-center space-x-2">
+          <Link to="./" className="flex items-center space-x-2">
             <div className="h-8 w-8 rounded-lg bg-gradient-to-r from-primary to-purple-600 flex items-center justify-center">
               <span className="text-white font-bold text-sm">MB</span>
             </div>
@@ -42,7 +41,7 @@ export const Header = () => {
               </Link>
             ))}
             <Button asChild>
-              <Link to="/contact">Get Started</Link>
+              <Link to="./contact">Get Started</Link>
             </Button>
           </nav>
 
@@ -74,7 +73,7 @@ export const Header = () => {
                 </Link>
               ))}
               <Button asChild className="w-fit">
-                <Link to="/contact" onClick={() => setIsMenuOpen(false)}>Get Started</Link>
+                <Link to="./contact" onClick={() => setIsMenuOpen(false)}>Get Started</Link>
               </Button>
             </nav>
           </div>
