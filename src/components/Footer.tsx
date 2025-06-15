@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import './Footer.css';
+=======
+
+import React from 'react';
+>>>>>>> b7aa81965b92a1da9fc41714ad736df98463a09b
 
 const Footer = () => {
   return (
@@ -49,4 +54,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
