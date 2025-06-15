@@ -1,15 +1,13 @@
 {
   "files": {
-    "main.css": "/MBTConsultancy.com.c/static/css/main.70c25add.css",
-    "main.js": "/MBTConsultancy.com.c/static/js/main.75db0bc0.js",
-    "static/js/453.5e42d0f1.chunk.js": "/MBTConsultancy.com.c/static/js/453.5e42d0f1.chunk.js",
+    "main.css": "/MBTConsultancy.com.c/static/css/main.4261295b.css",
+    "main.js": "/MBTConsultancy.com.c/static/js/main.180223e2.js",
     "index.html": "/MBTConsultancy.com.c/index.html",
-    "main.70c25add.css.map": "/MBTConsultancy.com.c/static/css/main.70c25add.css.map",
-    "main.75db0bc0.js.map": "/MBTConsultancy.com.c/static/js/main.75db0bc0.js.map",
-    "453.5e42d0f1.chunk.js.map": "/MBTConsultancy.com.c/static/js/453.5e42d0f1.chunk.js.map"
+    "main.4261295b.css.map": "/MBTConsultancy.com.c/static/css/main.4261295b.css.map",
+    "main.180223e2.js.map": "/MBTConsultancy.com.c/static/js/main.180223e2.js.map"
   },
   "entrypoints": [
-    "static/css/main.70c25add.css",
-    "static/js/main.75db0bc0.js"
+    "static/css/main.4261295b.css",
+    "static/js/main.180223e2.js"
   ]
 }
