@@ -1,5 +1,7 @@
 .home {
   min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .hero {
@@ -7,26 +9,30 @@
   background-size: cover;
   background-position: center;
   color: white;
-  padding: 8rem 0;
+  padding: 6rem 1rem;
   text-align: center;
 }
 
 .hero h1 {
-  font-size: 3rem;
+  font-size: clamp(2rem, 5vw, 3rem);
   margin-bottom: 1rem;
-  color: #4CAF50;
+  color: var(--primary-color);
 }
 
 .hero p {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 3vw, 1.2rem);
   margin-bottom: 2rem;
   color: #ccc;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .cta-buttons {
   display: flex;
   gap: 1rem;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .btn {
@@ -35,43 +41,51 @@
   text-decoration: none;
   font-weight: 500;
   transition: all 0.3s ease;
+  display: inline-block;
+  text-align: center;
+  min-width: 120px;
 }
 
 .btn-primary {
-  background-color: #4CAF50;
+  background-color: var(--primary-color);
   color: white;
 }
 
 .btn-primary:hover {
-  background-color: #45a049;
+  background-color: var(--accent-color);
+  transform: translateY(-2px);
 }
 
 .btn-secondary {
   background-color: transparent;
-  border: 2px solid #4CAF50;
-  color: #4CAF50;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
 }
 
 .btn-secondary:hover {
-  background-color: #4CAF50;
+  background-color: var(--primary-color);
   color: white;
+  transform: translateY(-2px);
 }
 
 .services {
-  padding: 5rem 0;
-  background-color: #f5f5f5;
+  padding: 4rem 1rem;
+  background-color: var(--light-background);
 }
 
 .services h2 {
   text-align: center;
-  color: #333;
+  color: var(--text-color);
   margin-bottom: 3rem;
+  font-size: clamp(1.5rem, 4vw, 2rem);
 }
 
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .service-card {
@@ -87,17 +101,18 @@
 }
 
 .service-card h3 {
-  color: #4CAF50;
+  color: var(--primary-color);
   margin-bottom: 1rem;
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
 }
 
 .service-card p {
-  color: #666;
+  color: var(--light-text);
   line-height: 1.6;
 }
 
 .about {
-  padding: 5rem 0;
+  padding: 4rem 1rem;
   background-color: white;
 }
 
@@ -105,6 +120,8 @@
   display: flex;
   align-items: center;
   gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .about-text {
@@ -112,52 +129,78 @@
 }
 
 .about-text h2 {
-  color: #333;
+  color: var(--text-color);
   margin-bottom: 1.5rem;
+  font-size: clamp(1.5rem, 4vw, 2rem);
 }
 
 .about-text p {
-  color: #666;
+  color: var(--light-text);
   line-height: 1.8;
   margin-bottom: 2rem;
 }
 
 .cta {
-  background-color: #4CAF50;
+  background-color: var(--primary-color);
   color: white;
-  padding: 5rem 0;
+  padding: 4rem 1rem;
   text-align: center;
 }
 
 .cta h2 {
   margin-bottom: 1rem;
+  font-size: clamp(1.5rem, 4vw, 2rem);
 }
 
 .cta p {
   margin-bottom: 2rem;
   opacity: 0.9;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .cta .btn-primary {
   background-color: white;
-  color: #4CAF50;
+  color: var(--primary-color);
 }
 
 .cta .btn-primary:hover {
-  background-color: #f5f5f5;
+  background-color: var(--light-background);
 }
 
 @media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2rem;
+  .hero {
+    padding: 4rem 1rem;
   }
-  
+
   .cta-buttons {
     flex-direction: column;
+    align-items: center;
   }
-  
+
+  .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+
   .about-content {
     flex-direction: column;
     text-align: center;
+    gap: 2rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 3rem 1rem;
+  }
+
+  .service-card {
+    padding: 1.5rem;
   }
 } 
