@@ -2,7 +2,7 @@
   "name": "mbt-consultancy",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://mattieballt-py.github.io/MBTConsultancy.com.c",
+  "homepage": "https://mattieballt-py.github.io/MBTConsultancy",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
