@@ -1,11 +1,7 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Home from './pages/Home';
-import Projects from './pages/Projects';
-import Contact from './pages/Contact';
-import Blog from './pages/Blog';
-import NotFound from './pages/NotFound';
+import Home from './components/Home';
 import './App.css';
 
 function App() {
@@ -16,10 +12,10 @@ function App() {
         <main className="main-content">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="*" element={<NotFound />} />
+            <Route path="/projects" element={<div>Projects Page</div>} />
+            <Route path="/blog" element={<div>Blog Page</div>} />
+            <Route path="/contact" element={<div>Contact Page</div>} />
+            <Route path="*" element={<div>404 - Page Not Found</div>} />
           </Routes>
         </main>
         <Footer />
